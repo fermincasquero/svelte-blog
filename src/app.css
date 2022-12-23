@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+	@apply bg-gray-100;
+}
+
+h3 {
+	@apply text-3xl;
+}
+
+button {
+	@apply rounded-none;
+}
+
+:focus-visible {
+	outline: none;
+}
+
+input {
+	@apply rounded-none p-1.5 focus:border-blue-400 focus:border-2 border border-gray-300;
+}
+
+.btn-primary {
+	@apply bg-blue-500 text-white py-1.5 px-3;
+}
+
+.paper {
+	@apply px-8 py-4 shadow-lg bg-white mt-10 m-4 border-gray-200;
+}
+
+.error {
+	@apply text-red-500 text-sm;
+}
