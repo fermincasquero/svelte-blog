@@ -17,7 +17,6 @@
 		};
 	}}
 	method="POST"
-	formnovalidate
 >
 	<div class="flex justify-center">
 		<div class="paper w-1/2  md:w-1/3 flex flex-col gap-3 items-center">
