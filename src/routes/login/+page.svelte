@@ -1,7 +1,16 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import { goto } from '$app/navigation';
 	import { useForm, required, Hint } from 'svelte-use-form';
+
+	import { auth } from 'src/store';
 	import Input from '../../components/Input.svelte';
+
+	auth.subscribe(({ authenticated }) => {
+		if (authenticated) {
+			goto('/');
+		}
+	});
 
 	const form = useForm();
 </script>
