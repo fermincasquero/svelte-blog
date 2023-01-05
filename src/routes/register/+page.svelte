@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { goto } from '$app/navigation';
+
+	import Input from '$lib/components/common/Input.svelte';
+
 	import { useForm, required, Hint, email } from 'svelte-use-form';
-	import Input from '../../components/Input.svelte';
 
 	const form = useForm();
 </script>

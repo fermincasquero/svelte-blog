@@ -1,7 +1,9 @@
 <script lang="ts">
-	import { getAuth } from '../apis/auth';
 	import { onMount } from 'svelte';
-	import { auth } from 'src/store';
+
+	import { auth } from '$lib/store';
+	import { getAuth } from '$lib/apis/auth';
+
 	import '../app.css';
 
 	onMount(() => {

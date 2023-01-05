@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { goto } from '$app/navigation';
-	import { useForm, required, Hint } from 'svelte-use-form';
 
-	import { auth } from 'src/store';
-	import Input from '../../components/Input.svelte';
+	import { auth } from '$lib/store';
+	import Input from '$lib/components/common/Input.svelte';
+
+	import { useForm, required, Hint } from 'svelte-use-form';
 
 	auth.subscribe(({ authenticated }) => {
 		if (authenticated) {
