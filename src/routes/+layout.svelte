@@ -3,6 +3,7 @@
 
 	import { auth } from '$lib/store';
 	import { getAuth } from '$lib/apis/auth';
+	import Navbar from '$lib/components/Navbar/index.svelte';
 
 	import '../app.css';
 
@@ -17,4 +18,7 @@
 	});
 </script>
 
-<slot />
+<div>
+	<Navbar />
+	<slot />
+</div>

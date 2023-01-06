@@ -6,6 +6,7 @@
 	import Input from '$lib/components/common/Input.svelte';
 
 	import { useForm, required, Hint } from 'svelte-use-form';
+	import { getAuth } from '$lib/apis/auth';
 
 	auth.subscribe(({ authenticated }) => {
 		if (authenticated) {
@@ -16,7 +17,23 @@
 	const form = useForm();
 </script>
 
-<form use:form use:enhance method="POST">
+<form
+	use:form
+	use:enhance={() => {
+		return async ({ result }) => {
+			if (result.type === 'success') {
+				getAuth()
+					.then(({ data }) => {
+						auth.set({ authenticated: true, user: data });
+					})
+					.catch((e) => {
+						console.log(e);
+					});
+			}
+		};
+	}}
+	method="POST"
+>
 	<div class="flex justify-center">
 		<div class="paper w-1/2  md:w-1/3 flex flex-col gap-3 items-center">
 			<h3>Login</h3>
