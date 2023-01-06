@@ -44,7 +44,13 @@
 				</Hint>
 			</Input>
 
-			<Input class="w-full" label="Password*" name="password" validators={[required]}>
+			<Input
+				class="w-full"
+				label="Password*"
+				name="password"
+				type="password"
+				validators={[required]}
+			>
 				<Hint for="password" on="required" let:value>
 					<span class="error"> Password is Required. </span>
 				</Hint>
