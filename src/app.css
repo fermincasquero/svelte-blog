@@ -22,12 +22,20 @@ input {
 	@apply rounded-none p-1.5 focus:border-blue-400 focus:border-2 border border-gray-300;
 }
 
+textarea {
+	@apply rounded-none p-1.5 focus:border-blue-400 focus:border-2 border border-gray-300;
+}
+
 .btn-primary {
 	@apply bg-blue-500 text-white py-1.5 px-3;
 }
 
+.btn-error {
+	@apply bg-red-500 text-white py-1.5 px-3;
+}
+
 .paper {
-	@apply px-8 py-4 shadow-lg bg-white mt-10 m-4 border-gray-200;
+	@apply p-4 shadow-lg bg-white mt-10 border-gray-200;
 }
 
 .error {

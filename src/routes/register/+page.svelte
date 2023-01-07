@@ -10,6 +10,7 @@
 </script>
 
 <form
+	class="w-full"
 	use:form
 	use:enhance={() => {
 		return async ({ result }) => {

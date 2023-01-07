@@ -18,6 +18,7 @@
 </script>
 
 <form
+	class="w-full"
 	use:form
 	use:enhance={() => {
 		return async ({ result }) => {
@@ -27,7 +28,7 @@
 						auth.set({ authenticated: true, user: data });
 					})
 					.catch((e) => {
-						console.log(e);
+						auth.set({ authenticated: false });
 					});
 			}
 		};

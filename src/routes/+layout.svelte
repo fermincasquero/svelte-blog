@@ -13,12 +13,13 @@
 				auth.set({ authenticated: true, user: data });
 			})
 			.catch((e) => {
-				console.log(e);
+				auth.set({ authenticated: false });
 			});
 	});
 </script>
 
-<div>
-	<Navbar />
+<Navbar />
+
+<div class="w-full flex justify-center">
 	<slot />
 </div>

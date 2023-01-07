@@ -10,7 +10,9 @@
 </script>
 
 <div class="w-full static top-0 h-16 shadow-lg flex flex-row items-center px-8">
-	<div class="flex-1" />
+	<div class="flex-1">
+		<a href="/posts">Posts</a>
+	</div>
 	<div>
 		{#if authState.authenticated}
 			<a href="/profile">{authState.user?.username}</a>
