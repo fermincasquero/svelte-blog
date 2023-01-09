@@ -3,12 +3,13 @@
 
 	import Input from '$lib/components/common/Input.svelte';
 	import TextArea from '$lib/components/common/TextArea.svelte';
+	import { enhance } from '$app/forms';
 
 	const form = useForm();
 </script>
 
 <div class="flex-col">
-	<form use:form>
+	<form use:form use:enhance method="post">
 		<h3 class="my-4">Create a new post</h3>
 
 		<div class="paper">
